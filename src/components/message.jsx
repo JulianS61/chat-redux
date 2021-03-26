@@ -5,7 +5,7 @@ class Message extends Component {
   render() {
     return (
       <div>
-        <p>Author Name<span>Date</span></p>
+        <h3><strong>Author Name</strong><span> - <em>Date</em></span></h3>
         <p>Message</p>
       </div>
     );

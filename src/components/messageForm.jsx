@@ -4,11 +4,13 @@ import React, { Component } from 'react';
 class MessageForm extends Component {
   render() {
     return (
-      <div>
-        <input type="text" name="" id="" /><input type="submit" value="Send" />
+      <div className="input-group mb-3">
+        <input type="text" className="form-control" placeholder="Message ..." aria-label="Recipient's username" aria-describedby="button-addon2" />
+        <button className="btn btn-danger" type="button" id="button-addon2">Send</button>
       </div>
     );
   }
 }
 
 export default MessageForm;
+

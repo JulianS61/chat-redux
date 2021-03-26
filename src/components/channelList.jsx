@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class ChannelList extends Component {
   render() {
     return (
       <div className="channel-list-nav">
-        <h2>Title</h2>
+        <h2>Redux Chat</h2>
         <ul>
-          <li>#ch1</li>
-          <li>#ch2</li>
-          <li>#ch3</li>
+          <li><FontAwesomeIcon icon={['fab', 'slack-hash']} /> ch1</li>
+          <li><FontAwesomeIcon icon={['fab', 'slack-hash']} /> ch2</li>
+          <li><FontAwesomeIcon icon={['fab', 'slack-hash']} /> ch3</li>
         </ul>
       </div>
     );
