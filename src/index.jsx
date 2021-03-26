@@ -8,6 +8,14 @@ import { createStore, combineReducers } from 'redux';
 import App from './components/app';
 import '../assets/stylesheets/application.scss';
 
+// Redux initial state
+const initialState = {
+  message: [],
+  channel: ['General', 'Tokyo', 'batch-467'],
+  selectedChanne: "General",
+  currentUserName: prompt("Enter your user name :") || (Math.floor(Math.random() * 900)) + 100,
+};
+
 // State and reducers
 const reducers = combineReducers({
   changeMe: (state = null, action) => state

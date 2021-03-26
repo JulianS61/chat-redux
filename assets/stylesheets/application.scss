@@ -21,14 +21,25 @@ hr {
   border-top: 1px solid $font-color;
 }
 
-.app {
-  display: flex;
-  min-height: 100vh;
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+  }
 }
 
 h2 {
   margin: 0;
   font-size: 2rem;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
 }
 
 .server-side-nav {

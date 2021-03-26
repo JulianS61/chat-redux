@@ -8,9 +8,9 @@ class ChannelList extends Component {
       <div className="channel-list-nav">
         <h2>Redux Chat</h2>
         <ul>
-          <li><FontAwesomeIcon icon={['fab', 'slack-hash']} /> ch1</li>
-          <li><FontAwesomeIcon icon={['fab', 'slack-hash']} /> ch2</li>
-          <li><FontAwesomeIcon icon={['fab', 'slack-hash']} /> ch3</li>
+          <li><a href="#"><FontAwesomeIcon icon={['fab', 'slack-hash']} /> ch1</a></li>
+          <li><a href="#"><FontAwesomeIcon icon={['fab', 'slack-hash']} /> ch2</a></li>
+          <li><a href="#"><FontAwesomeIcon icon={['fab', 'slack-hash']} /> ch3</a></li>
         </ul>
       </div>
     );

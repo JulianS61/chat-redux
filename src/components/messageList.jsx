@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Message from './message';
 import MessageForm from './messageForm';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 // eslint-disable-next-line react/prefer-stateless-function
