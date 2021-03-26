@@ -1,9 +1,16 @@
 import React from 'react';
+import ChannelList from './channelList';
+import MessageList from './messageList';
+
 
 const App = () => {
   return (
     <div className="app">
-      <p>React + Redux starter</p>
+      <div className="server-side-nav">
+        <div className="icon">LW</div>
+      </div>
+      <ChannelList />
+      <MessageList />
     </div>
   );
 };
