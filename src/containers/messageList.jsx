@@ -37,7 +37,7 @@ class MessageList extends Component {
           <hr />
         </div>
         <div>
-          <div>
+          <div className="scroll">
             {messages.map(message => <Message key={message.id} message={message} />)}
           </div>
           <hr />
