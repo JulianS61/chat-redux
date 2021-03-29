@@ -3,20 +3,33 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Message from '../components/message';
-import MessageForm from '../components/messageForm';
-import fetchMessages from '../actions';
+import MessageForm from '../containers/messageForm';
+import { fetchMessages } from '../actions';
 
 
 // eslint-disable-next-line react/prefer-stateless-function
 class MessageList extends Component {
-  componentWillMount() {
-    this.props.fetchMessages('General');
+  constructor(props) {
+    super(props);
+    this.state = { interval: null };
   }
+  componentWillMount() {
+    this.props.fetchMessages('467');
+  }
+
+  // componentDidMount() {
+  //   const interval = setInterval(() => { this.props.fetchMessages('467'); }
+  //     , 1000);
+  //   // eslint-disable-next-line react/no-did-mount-set-state
+  //   this.setState({ interval });
+  // }
+
+  // componentWillUnmount() {
+  //   clearInterval(this.state.interval);
+  // }
 
   render() {
     const { messages } = this.props;
-    console.log(this.props);
-
     return (
       <div className="message-list">
         <div>
@@ -25,7 +38,7 @@ class MessageList extends Component {
         </div>
         <div>
           <div>
-            {messages.map(message => <Message key={message.created_at} message={message} />)}
+            {messages.map(message => <Message key={message.id} message={message} />)}
           </div>
           <hr />
           <MessageForm />

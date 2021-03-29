@@ -20,11 +20,13 @@ const initialState = {
     {
       author: "Guest654",
       content: "Hello world!",
+      id: 1,
       created_at: "2017-09-26T23:03:16.365Z"
     },
     {
       author: "Guest835",
       content: "My name is Guest835",
+      id: 2,
       created_at: "2017-09-26T23:03:21.194Z"
     }
   ],
@@ -41,7 +43,7 @@ const reducers = combineReducers({
   currentUsername: currentUsernameReducer,
   channels: channelsReducer,
   selectedChannel: selectedChannelReducer,
-  messages: messagesReducer
+  messages: messagesReducer,
 });
 
 // render an instance of the component in the DOM

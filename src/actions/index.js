@@ -1,8 +1,8 @@
+/* eslint-disable arrow-parens */
 // TODO: add and export your own actions
 
 const fetchMessages = (channel) => {
   const promise = fetch(`https://wagon-chat.herokuapp.com/${channel}/messages`)
-    // eslint-disable-next-line arrow-parens
     .then((response) => response.json())
     .then((data) => {
       return data.messages;
@@ -14,4 +14,28 @@ const fetchMessages = (channel) => {
   };
 };
 
-export default fetchMessages;
+const createMessage = (channel, author, content) => {
+  const headers = {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+  };
+  const body = {
+    author,
+    content,
+  };
+  const promise = fetch(
+    `https://wagon-chat.herokuapp.com/${channel}/messages`,
+    {
+      method: "POST",
+      headers,
+      body: JSON.stringify(body),
+    }
+  ).then((response) => response.json());
+
+  return {
+    type: "UPDATE_MESSAGES",
+    payload: promise,
+  };
+};
+
+export { fetchMessages, createMessage };
